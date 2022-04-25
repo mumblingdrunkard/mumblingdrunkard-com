@@ -1,12 +1,6 @@
 <script lang="ts">
   import { Navigate } from "svelte-router-spa";
-  import { onMount } from "svelte";
-
-  let Test = null;
-  onMount(async () => {
-    if (Test == null)
-      Test = (await import("../components/Test.svelte")).default;
-  });
+  import Eager from "../components/Eager.svelte"
 </script>
 
 <main>
@@ -14,7 +8,7 @@
 
   <p><Navigate to="blog">Link to blog!</Navigate></p>
 
-  <svelte:component this={Test} />
+  <svelte:component this={Eager} />
 </main>
 
 <style>

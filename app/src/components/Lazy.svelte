@@ -4,10 +4,8 @@
 <main>
   <h2>A different component</h2>
   <p>
-    Adipisicing porro quod officia eligendi impedit. Consectetur nobis deserunt
-    aut possimus commodi Nulla animi quas aspernatur esse non. Impedit ullam
-    officiis repudiandae exercitationem blanditiis? Dicta ducimus ad quisquam
-    alias nemo.
+    This component is lazily loaded.
+    It is not fetched until it is needed for rendering.
   </p>
 </main>
 

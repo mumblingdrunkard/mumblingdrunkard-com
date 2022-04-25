@@ -33,7 +33,7 @@ function serve() {
 export default {
   input: 'src/main.ts',
   output: {
-    sourcemap: true,
+    sourcemap: false,
     format: 'es',
     name: 'app',
     // file: 'public/app/static/build/bundle.js',
@@ -41,7 +41,7 @@ export default {
   },
   plugins: [
     svelte({
-      emitCss: false,
+      // emitCss: false,
       preprocess: sveltePreprocess({ sourceMap: !production }),
       compilerOptions: {
         // enable run-time checks when not in production
