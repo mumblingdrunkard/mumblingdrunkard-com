@@ -1,12 +1,12 @@
 services:
   app:
     build: app
-  api:
-    build: api
+  # api:
+  #   build: api
   nginx:
     build: nginx
     ports:
       - 80:8080
     depends_on:
       - app
-      - api
+      # - api
