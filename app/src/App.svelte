@@ -4,14 +4,14 @@
 </script>
 
 <main class="center">
-  <Router {routes} options={{ prefix: "app" }} />
-
   <p>
     See the source code for this on
     <a href="https://github.com/mumblingdrunkard/mumblingdrunkard-com">
       GitHub
     </a>
   </p>
+
+  <Router {routes} options={{ prefix: "app" }} />
 </main>
 
 <style>

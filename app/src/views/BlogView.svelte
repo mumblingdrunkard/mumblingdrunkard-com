@@ -1,11 +1,10 @@
 <script lang="ts">
   import { Navigate } from "svelte-router-spa";
-  import Eager from "../components/Eager.svelte";
   import { onMount } from "svelte";
 
-  let Lazy = null;
+  let Post = null;
   onMount(async () => {
-    Lazy = (await import("../components/Lazy.svelte")).default;
+    Post = (await import("../components/Post.svelte")).default;
   });
 </script>
 
@@ -14,8 +13,7 @@
 
   <Navigate to="/">Link to home!</Navigate>
 
-  <svelte:component this={Eager} />
-  <svelte:component this={Lazy} />
+  <svelte:component this={Post} />
 </main>
 
 <style>

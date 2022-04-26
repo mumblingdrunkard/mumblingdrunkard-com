@@ -12,5 +12,6 @@ RUN cargo build --release
 FROM debian:bullseye-slim as production
 WORKDIR /api/
 COPY --from=api /api/target/release/api main
+COPY test.html .
 EXPOSE 8082
 CMD ["/api/main"]
