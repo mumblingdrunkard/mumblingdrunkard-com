@@ -11,10 +11,14 @@
 
 <style>
   main {
-    text-align: justify;
+    text-align: center;
     padding: .5em;
     max-width: 480px;
     margin: 0 auto;
+  }
+
+  main>p {
+    text-align: justify;
   }
 
   h2 {
