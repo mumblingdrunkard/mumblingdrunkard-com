@@ -5,7 +5,8 @@ RUN  npm ci
 COPY src src
 COPY public public
 COPY *.json *.js ./
-RUN  npm run build --omit=dev
+COPY Makefile inject.sh ./
+RUN  make
 
 # reduce number of requests needed
 RUN  mv public/app/static/build/main-*.js public/app/static/build/main.js
