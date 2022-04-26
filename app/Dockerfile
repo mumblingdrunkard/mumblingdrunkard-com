@@ -7,6 +7,9 @@ COPY public public
 COPY *.json *.js ./
 RUN  npm run build --omit=dev
 
+# reduce number of requests needed
+RUN  mv public/app/static/build/main-*.js public/app/static/build/main.js
+
 FROM nginx as production
 COPY nginx.conf /etc/nginx
 COPY --from=build /app/public /public
