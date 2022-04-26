@@ -6,7 +6,7 @@
 <main class="center">
   <h1>Home</h1>
 
-  <p><Navigate to="blog">Link to blog!</Navigate></p>
+  <Navigate to="blog">Link to blog!</Navigate>
 
   <svelte:component this={Eager} />
 </main>

@@ -12,7 +12,7 @@
 <main class="center">
   <h1>The Blog!</h1>
 
-  <p><Navigate to="/">Link to home!</Navigate></p>
+  <Navigate to="/">Link to home!</Navigate>
 
   <svelte:component this={Eager} />
   <svelte:component this={Lazy} />

@@ -3,7 +3,7 @@
   import { routes } from "./routes";
 </script>
 
-<main>
+<main class="center">
   <Router {routes} options={{ prefix: "app" }} />
 
   <p>
