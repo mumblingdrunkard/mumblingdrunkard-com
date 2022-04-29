@@ -4,10 +4,11 @@
   let content = "Nothing here!";
   onMount(async () => {
     fetch("/api/test", { cache: "force-cache" }).then((response) => {
-      response.status == 200 &&
+      if (response.status == 200) {
         response.json().then((json) => {
           content = json.content;
         });
+      }
     });
   });
 </script>
