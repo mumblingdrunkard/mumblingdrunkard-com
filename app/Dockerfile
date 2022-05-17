@@ -4,8 +4,7 @@ COPY package*.json ./
 RUN  npm ci
 COPY src src
 COPY public public
-COPY *.json *.js ./
-COPY Makefile inject.sh ./
+COPY Makefile inject.sh *.json *.js ./
 RUN  make
 
 FROM nginx as production
