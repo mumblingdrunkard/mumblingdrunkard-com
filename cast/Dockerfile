@@ -1,5 +1,5 @@
 FROM nginx as production
 COPY nginx.conf /etc/nginx
-COPY public public
+COPY public /public
 RUN  nginx -t
-EXPOSE 8082
+EXPOSE 8083
