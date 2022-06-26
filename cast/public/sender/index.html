@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script type='text/javascript'>
+    let applicationId = "D84AC93B";
+    let initializeCastApi = function () {
+      cast.framework.CastContext.getInstance().setOptions({
+        receiverApplicationId: applicationId,
+        autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED,
+      });
+    }
+
+    window['__onGCastAPIAvailable'] = function (isAvailable) {
+      if (isAvailable) {
+        initializeCastApi();
+      }
+      console.log("Hello!");
+    }
+  </script>
+  <script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
+</head>
+
+<body>
+  <google-cast-launcher></google-cast-launcher>
+</body>
+
+</html>
